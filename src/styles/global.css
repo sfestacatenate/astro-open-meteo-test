@@ -1,0 +1,324 @@
+:root {
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #1d2433;
+  background: #f7f8fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: wait;
+}
+
+a {
+  color: inherit;
+}
+
+.page-shell {
+  width: min(920px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 5rem 0 3rem;
+}
+
+.intro {
+  max-width: 680px;
+  margin-bottom: 2rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 750;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #5b5fc7;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 0.75rem;
+  font-size: clamp(2.25rem, 8vw, 4.25rem);
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+}
+
+.lead {
+  margin-bottom: 0;
+  max-width: 58ch;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #5b6475;
+}
+
+.app-card {
+  border: 1px solid #e1e4ea;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 18px 50px rgb(20 28 45 / 8%);
+  overflow: hidden;
+}
+
+.search-form {
+  padding: 1.5rem;
+}
+
+.field-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.45rem;
+  font-size: 0.92rem;
+  font-weight: 650;
+}
+
+.field small {
+  font-size: 0.78rem;
+  font-weight: 450;
+  color: #747d8f;
+}
+
+.field input {
+  width: 100%;
+  border: 1px solid #cfd5df;
+  border-radius: 10px;
+  padding: 0.72rem 0.8rem;
+  color: #1d2433;
+  background: #fff;
+  outline: none;
+}
+
+.field input:focus {
+  border-color: #5b5fc7;
+  box-shadow: 0 0 0 3px rgb(91 95 199 / 14%);
+}
+
+.primary-button {
+  margin-top: 1.25rem;
+  border: 0;
+  border-radius: 10px;
+  padding: 0.78rem 1.1rem;
+  font-weight: 720;
+  color: white;
+  background: #3538a8;
+}
+
+.primary-button:hover:not(:disabled) {
+  background: #292c8f;
+}
+
+.primary-button:disabled {
+  opacity: 0.7;
+}
+
+.results {
+  border-top: 1px solid #eceef2;
+  padding: 1.5rem;
+}
+
+.results-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.results-heading h2 {
+  margin-bottom: 0;
+  font-size: clamp(1.25rem, 4vw, 1.7rem);
+  letter-spacing: -0.03em;
+}
+
+.results-meta {
+  margin-bottom: 0;
+  font-size: 0.82rem;
+  color: #747d8f;
+  text-align: right;
+}
+
+.temperature-list {
+  border: 1px solid #e6e8ed;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.temperature-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.78rem 1rem;
+  background: #fff;
+}
+
+.temperature-row + .temperature-row {
+  border-top: 1px solid #eceef2;
+}
+
+.temperature-row time {
+  font-variant-numeric: tabular-nums;
+  color: #596274;
+}
+
+.temperature-row strong {
+  font-variant-numeric: tabular-nums;
+}
+
+.message {
+  margin: 0 1.5rem 1.5rem;
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  line-height: 1.5;
+}
+
+.message--error {
+  border: 1px solid #f2c9c9;
+  color: #8b1e1e;
+  background: #fff5f5;
+}
+
+.page-footer {
+  padding-top: 1.25rem;
+  font-size: 0.82rem;
+  color: #747d8f;
+  text-align: center;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media (max-width: 720px) {
+  .page-shell {
+    padding-top: 3rem;
+  }
+
+  .field-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .results-heading {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .results-meta {
+    text-align: left;
+  }
+}
+
+.temperature-chart {
+  margin-bottom: 1.25rem;
+  border: 1px solid #e6e8ed;
+  border-radius: 12px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.chart-heading {
+  padding: 1rem 1rem 0;
+}
+
+.chart-heading h3 {
+  margin: 0;
+  font-size: 1rem;
+  letter-spacing: -0.015em;
+}
+
+.chart-viewport {
+  overflow-x: auto;
+  padding: 0.25rem 0.5rem 0.5rem;
+}
+
+.chart {
+  display: block;
+  width: 100%;
+  min-width: 640px;
+  height: auto;
+}
+
+.chart-grid-line {
+  stroke: #eceef2;
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.chart-axis-line,
+.chart-axis-mark {
+  stroke: #aeb5c2;
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.chart-axis-tick {
+  fill: #687284;
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+
+.chart-axis-label {
+  fill: #505a6b;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.chart-line {
+  stroke: #3538a8;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.chart-point {
+  fill: #fff;
+  stroke: #3538a8;
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+}
+
+.chart-point:hover,
+.chart-point:focus {
+  fill: #3538a8;
+  outline: none;
+}

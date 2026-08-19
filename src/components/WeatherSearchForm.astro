@@ -1,0 +1,43 @@
+<form class="search-form" data-weather-form novalidate>
+  <div class="field-grid">
+    <label class="field">
+      <span>Latitude</span>
+      <input
+        name="latitude"
+        type="number"
+        min="-90"
+        max="90"
+        step="any"
+        inputmode="decimal"
+        value="51.5074"
+        required
+      />
+      <small>From -90 to 90</small>
+    </label>
+
+    <label class="field">
+      <span>Longitude</span>
+      <input
+        name="longitude"
+        type="number"
+        min="-180"
+        max="180"
+        step="any"
+        inputmode="decimal"
+        value="-0.1278"
+        required
+      />
+      <small>From -180 to 180</small>
+    </label>
+
+    <label class="field">
+      <span>Date</span>
+      <input name="date" type="date" required />
+      <small>Historical data or forecast</small>
+    </label>
+  </div>
+
+  <button class="primary-button" type="submit" data-submit-button>
+    Get temperatures
+  </button>
+</form>

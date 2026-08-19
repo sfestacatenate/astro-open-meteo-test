@@ -1,0 +1,19 @@
+---
+import TemperatureChart from './TemperatureChart.astro';
+---
+
+<section class="results" data-results hidden aria-live="polite">
+  <div class="results-heading">
+    <div>
+      <p class="eyebrow">Hourly temperatures</p>
+      <h2 data-results-title></h2>
+    </div>
+    <p class="results-meta" data-results-meta></p>
+  </div>
+
+  <TemperatureChart />
+
+  <div class="temperature-list" data-temperature-list></div>
+</section>
+
+<div class="message message--error" data-error hidden role="alert"></div>

@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TemperatureResults from '../components/TemperatureResults.astro';
+import WeatherSearchForm from '../components/WeatherSearchForm.astro';
+---
+
+<BaseLayout
+  title="Hourly Temperature · Open-Meteo"
+  description="Get hourly temperatures for a location and date using the Open-Meteo API."
+>
+  <main class="page-shell">
+    <section class="intro">
+      <p class="eyebrow">Open-Meteo API example</p>
+      <h1>Hourly Temperature</h1>
+      <p class="lead">
+        Enter coordinates and a date to retrieve the temperature for every available hour of that day.
+      </p>
+    </section>
+
+    <section class="app-card" aria-labelledby="search-heading">
+      <h2 class="sr-only" id="search-heading">Search temperatures</h2>
+      <WeatherSearchForm />
+      <TemperatureResults />
+    </section>
+
+    <footer class="page-footer">
+      Weather data provided by <a href="https://open-meteo.com/" rel="noreferrer">Open-Meteo</a>.
+    </footer>
+  </main>
+</BaseLayout>
+
+<script>
+  import { initWeatherApp } from '../scripts/weather-app';
+
+  initWeatherApp();
+</script>

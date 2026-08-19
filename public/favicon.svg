@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Thermometer icon">
+  <circle cx="32" cy="32" r="30" fill="#eef2ff"/>
+  <path d="M36 36.3V15a8 8 0 0 0-16 0v21.3a13 13 0 1 0 16 0ZM28 11a4 4 0 0 1 4 4v23.7l2 1.2a9 9 0 1 1-12 0l2-1.2V15a4 4 0 0 1 4-4Z" fill="#3730a3"/>
+  <path d="M28 22v22" stroke="#3730a3" stroke-width="4" stroke-linecap="round"/>
+</svg>
