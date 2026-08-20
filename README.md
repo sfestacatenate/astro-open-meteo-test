@@ -161,4 +161,8 @@ Good extensions that preserve the small scope of the project:
 
 ## Data source
 
-Weather data is provided by Open-Meteo. Check Open-Meteo's current usage terms before deploying the application for commercial use.
+This project uses the Open-Meteo API for educational and demonstration purposes.
+
+Weather data is provided by Open-Meteo under the CC BY 4.0 licence.
+
+https://open-meteo.com/
